@@ -3,14 +3,11 @@ public class Main {
     public static void main(String[] args) {
         //Llamadas a la funciones
 
-        letraNota(7);
-        //System.out.println(letraNota(7));
+        System.out.println(letraNota(7));
 
-        esMultiplo(9, 3);
-        //System.out.println(esMultiplo(9, 3));
+        System.out.println(esMultiplo(9, 3));
 
-        factorial(5);
-        //System.out.println(factorial(5));
+        System.out.println(factorial(5));
 
         int[] positivos = {1, 3, 4,};
         sumarPositivos(positivos);
@@ -68,8 +65,8 @@ public class Main {
      * Ejemplo: para n=4 --> tiene que hacer la operación 4*3*2*1 y devolver 24
      */
     public static int factorial(int n) {
-        int suma = n;
-        for (int i = 0; i < n; i++) {
+        int suma = 1;
+        for (int i = 1; i <= n; i++) {
             suma *= i;
         }
         return suma;
@@ -98,7 +95,7 @@ public class Main {
      * @return debe de devolver la nota máxima dentro del array
      */
     public static double notaMaxima(double[] notas) {
-        double notaMax = 0;
+        double notaMax = notas[0]; // Inicializa con la pirmera posicion del array
         for (int i = 0; i < notas.length; i++) {
             if (notas[i] > notaMax) {
                 notaMax = notas[i];
