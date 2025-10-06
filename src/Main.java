@@ -28,21 +28,21 @@ public class Main {
      */
     public static String letraNota(int nota) {
 
-        if ((nota >= 9 && nota <= 10)) {
-            return "A";
-        } else if (nota >= 7 && nota < 9) {
-            return "B";
-        } else if (nota >= 5 && nota < 7) {
-            return "C";
-        } else if (nota >= 3 && nota < 5) {
-            return "D";
-        } else if (nota >= 0 && nota < 3) {
-            return "F";
-        } else {
-            return "Valor incorrecto";
+        switch (nota) {
+            case 10, 9:
+                return "A";
+            case 8, 7:
+                return "B";
+            case 6, 5:
+                return "C";
+            case 4, 3:
+                return "D";
+            case 2, 1, 0:
+                return "F";
+            default:
+                return "Nota inválida";
         }
     }
-
 
     /**
      * Función para saber si un número es multiplo de otro
